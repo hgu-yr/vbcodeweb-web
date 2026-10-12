@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import BrandLogo from './BrandLogo';
 
-// ImgLogo 优先加载真实 logo 图片，加载失败时回退到字母徽标。
+// ImgLogo 优先加载真实 logo 图片，加载失败时回退到生成的兜底 logo。
 export default function ImgLogo({
   src,
   name,

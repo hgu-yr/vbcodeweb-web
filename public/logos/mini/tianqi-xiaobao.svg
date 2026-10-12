@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="天气小报">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" fill="url(#g)"/>
+  <circle cx="64" cy="64" r="20" fill="none" stroke="#fff" stroke-width="7"/>
+  <path d="M64 26v-9M64 102v9M26 64h-9M102 64h9M37 37l-6-6M91 37l6-6M37 91l-6 6M91 91l6 6" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+</svg>

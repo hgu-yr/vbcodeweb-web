@@ -4,7 +4,7 @@ import type { MiniProgram } from '@/lib/types';
 import CopyButton from '@/components/CopyButton';
 import ViewPing from '@/components/ViewPing';
 import ImgLogo from '@/components/ImgLogo';
-import { localLogo } from '@/lib/logo';
+import { miniLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -39,7 +39,7 @@ export default async function MiniProgramDetailPage({
       <aside>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 14 }}>
           <ImgLogo
-            src={localLogo(`logos/mini/${program.slug}.png`)}
+            src={miniLogo(program.slug)}
             name={program.name}
             size={110}
           />

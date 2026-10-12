@@ -12,3 +12,9 @@ export function localLogo(rel: string): string | undefined {
     return undefined;
   }
 }
+
+// miniLogo 依次尝试 png / svg，返回第一个真实存在的资源路径；
+// 都不存在时返回 undefined，由组件回退到生成的兜底 logo。
+export function miniLogo(slug: string): string | undefined {
+  return localLogo(`logos/mini/${slug}.png`) ?? localLogo(`logos/mini/${slug}.svg`);
+}

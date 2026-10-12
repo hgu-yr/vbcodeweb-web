@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { apiGet, buildQuery } from '@/lib/api';
 import type { Article, Category, MiniProgram, PageResult, Product } from '@/lib/types';
 import ImgLogo from '@/components/ImgLogo';
+import { miniLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -76,7 +77,7 @@ export default async function HomePage() {
           {programs.map((m) => (
             <Link href={`/mini-programs/${m.slug}`} className="card" key={m.ID}>
               <div className="brand-cover">
-                <ImgLogo src={`/logos/mini/${m.slug}.png`} name={m.name} size={64} />
+                <ImgLogo src={miniLogo(m.slug)} name={m.name} size={64} />
               </div>
               <h3>{m.name}</h3>
               <p>{m.description}</p>
