@@ -1,0 +1,16 @@
+# 依赖与构建产物不进入构建上下文
+node_modules
+.next
+out
+
+# 本地/仓库元数据
+.git
+.gitignore
+*.md
+*.log
+.env*.local
+
+# 镜像自身与编排文件
+Dockerfile
+.dockerignore
+railway.json
