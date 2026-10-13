@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { apiGet, buildQuery } from '@/lib/api';
 import type { Category, PageResult, Product } from '@/lib/types';
 import ImgLogo from '@/components/ImgLogo';
+import { productLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -74,7 +75,7 @@ export default async function ProductsPage({
         {data.list.map((p) => (
           <Link href={`/products/${p.slug}`} className="card" key={p.ID}>
             <div className="row">
-              <ImgLogo src={`/logos/${p.slug}.png`} name={p.name} size={36} />
+              <ImgLogo src={productLogo(p.slug, p.logo)} name={p.name} size={36} />
               <h3>{p.name}</h3>
             </div>
             <p>{p.tagline}</p>

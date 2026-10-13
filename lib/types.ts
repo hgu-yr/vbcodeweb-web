@@ -68,3 +68,30 @@ export interface LoginResult {
     role: string;
   };
 }
+
+export interface Submission {
+  ID: number;
+  CreatedAt: string;
+  kind: number; // 1 工具 2 小程序
+  name: string;
+  slug: string;
+  tagline: string;
+  description: string;
+  website_url: string;
+  pricing: string;
+  platforms: string;
+  app_id: string;
+  subject: string;
+  builder_tool: string;
+  guide_url: string;
+  category_id: number;
+  logo_url: string;
+  cover_url: string;
+  mini_code_url: string;
+  contact: string;
+  status: number; // 0 待审核 1 通过 2 拒绝
+  review_note: string;
+  published_id: number;
+  ip: string;
+  reviewed_at: string | null;
+}

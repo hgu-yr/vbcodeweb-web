@@ -3,6 +3,7 @@ import { apiGet } from '@/lib/api';
 import type { Product } from '@/lib/types';
 import VisitButton from '@/components/VisitButton';
 import ImgLogo from '@/components/ImgLogo';
+import { productLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,7 +31,7 @@ export default async function ProductDetailPage({
     <div className="detail">
       <div className="content">
         <div className="row" style={{ display: 'flex', gap: 14, alignItems: 'center' }}>
-          <ImgLogo src={`/logos/${product.slug}.png`} name={product.name} size={52} />
+          <ImgLogo src={productLogo(product.slug, product.logo)} name={product.name} size={52} />
           <div>
             <h1 style={{ margin: 0 }}>{product.name}</h1>
             <p className="meta" style={{ margin: 0 }}>

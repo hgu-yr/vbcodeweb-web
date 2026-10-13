@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { apiGet, buildQuery } from '@/lib/api';
 import type { Article, Category, MiniProgram, PageResult, Product } from '@/lib/types';
 import ImgLogo from '@/components/ImgLogo';
-import { miniLogo } from '@/lib/logo';
+import { miniArt, productLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -55,7 +55,7 @@ export default async function HomePage() {
           {products.map((p) => (
             <Link href={`/products/${p.slug}`} className="card" key={p.ID}>
               <div className="row">
-                <ImgLogo src={`/logos/${p.slug}.png`} name={p.name} size={36} />
+                <ImgLogo src={productLogo(p.slug, p.logo)} name={p.name} size={36} />
                 <h3>{p.name}</h3>
               </div>
               <p>{p.tagline}</p>
@@ -77,7 +77,7 @@ export default async function HomePage() {
           {programs.map((m) => (
             <Link href={`/mini-programs/${m.slug}`} className="card" key={m.ID}>
               <div className="brand-cover">
-                <ImgLogo src={miniLogo(m.slug)} name={m.name} size={64} />
+                <ImgLogo src={miniArt(m.slug, m.cover, m.mini_code_img)} name={m.name} size={64} />
               </div>
               <h3>{m.name}</h3>
               <p>{m.description}</p>

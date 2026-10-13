@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/products">工具</Link>
               <Link href="/mini-programs">小程序</Link>
               <Link href="/articles">文章</Link>
+              <Link href="/submit">提交作品</Link>
               <Link href="/admin" className="nav-admin">
                 后台
               </Link>
